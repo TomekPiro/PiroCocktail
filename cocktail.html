@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listino Cocktail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        main {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .cocktail {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cocktail img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .cocktail h2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: opacity 0.3s;
+        }
+
+        .cocktail:hover img {
+            transform: scale(1.2);
+            opacity: 0.7;
+        }
+
+        .cocktail:hover h2 {
+            opacity: 1;
+        }
+
+        .cocktail a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Listino Cocktail</h1>
+    </header>
+    <main>
+        <div class="cocktail">
+            <a href="#">
+                <img src="mojito.jpg" alt="Mojito">
+                <h2>Mojito</h2>
+            </a>
+        </div>
+
+        <div class="cocktail">
+            <a href="#">
+                <img src="negroni.jpg" alt="Negroni">
+                <h2>Negroni</h2>
+            </a>
+        </div>
+
+        <div class="cocktail">
+            <a href="#">
+                <img src="margarita.jpg" alt="Margarita">
+                <h2>Margarita</h2>
+            </a>
+        </div>
+
+        <div class="cocktail">
+            <a href="#">
+                <img src="sex_on_the_beach.jpg" alt="Sex on the Beach">
+                <h2>Sex on the Beach</h2>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
